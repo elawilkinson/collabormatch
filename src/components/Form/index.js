@@ -1,20 +1,25 @@
 import React from "react";
 
 
-import ProjectNameField from "../ProjectName";
+import ProjectInterestField from "../ProjectInterest";
 import ProjectTypeField from "../ProjectType";
-import ConfidenceField from "../Confidence";
+import StrengthField from "../Strength";
 import AvailabilityField from "../Availability";
 
 function Dropdown () {
+    function handleClick (e) {
+        e.preventDefault()
+        // how connect to backend?
+        console.log("click that handle")
+    }
     return(
         <div>
             <form>
-            <ProjectNameField />
+            <ProjectInterestField />
             <ProjectTypeField />
-            <ConfidenceField />
+            <StrengthField />
             <AvailabilityField />
-            <button>Get suggestions</button>         
+            <button onClick={handleClick}>Get suggestions</button>         
             </form>
         </div>
     )
