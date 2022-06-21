@@ -29,13 +29,17 @@ function Dropdown ( {userInput, setUserInput}) {
     console.log(projInt)
     console.log(projType)
     return(
-        <div>
+        <div className="dropdown-form">
             <form>
+            <div className="dropdown-left">
             <ProjectInterestField projInt={projInt} setProjInt={setProjInt}/>
             <ProjectTypeField  projType={projType} setProjType={setProjType} />
+            </div>
+            <div className="dropdown-right">
             <StrengthField strength={strength} setStrength={setStrength}  />
             <AvailabilityField avail={avail} setAvail={setAvail} />
-            <button onClick={handleClick}>Get suggestions</button>         
+            </div>
+            <button className="dropdown-button" onClick={handleClick}>Get suggestions</button>         
             </form>
         </div>
     )
