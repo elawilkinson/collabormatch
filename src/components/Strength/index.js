@@ -1,6 +1,6 @@
 import React from "react";
 
-function StrengthField() {
+function StrengthField( { userInput, setUserInput } ) {
   return (
     <div>
       <label>Strength</label>

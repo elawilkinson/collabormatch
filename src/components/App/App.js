@@ -1,10 +1,17 @@
 import "./App.css";
-import React from "react";
+import React, {useState} from "react";
 
 import Dropdown from "../Form";
 
 function App() {
   console.log("working!!!");
+
+  // This is where we would store our user's choices
+  // useState --> a way of tracking change
+  //const userInput = {};
+
+  const [userInput, setUserInput] = useState({})
+  console.log(userInput)
   return (
     <div className="App">
       {/* NB navbar - logo, profile icon, hamburger icon -could go here if time */}
@@ -25,7 +32,7 @@ function App() {
       </div>
       <div className="user-input">
         <p>Search below for your perfect collaborm8</p>
-        <Dropdown />
+        <Dropdown user={userInput} setUserInput={setUserInput}/>
       </div>
     </div>
   );

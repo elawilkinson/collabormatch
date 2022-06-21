@@ -6,19 +6,21 @@ import ProjectTypeField from "../ProjectType";
 import StrengthField from "../Strength";
 import AvailabilityField from "../Availability";
 
-function Dropdown () {
+function Dropdown ( {userInput, setUserInput}) {
     function handleClick (e) {
         e.preventDefault()
         // how connect to backend?
         console.log("click that handle")
+        // send our complete object to the backend 
+        // return a suggestion
     }
     return(
         <div>
             <form>
-            <ProjectInterestField />
-            <ProjectTypeField />
-            <StrengthField />
-            <AvailabilityField />
+            <ProjectInterestField userInput={userInput} setUserInput={setUserInput} />
+            <ProjectTypeField userInput={userInput} setUserInput={setUserInput} />
+            <StrengthField userInput={userInput} setUserInput={setUserInput} />
+            <AvailabilityField userInput={userInput} setUserInput={setUserInput} />
             <button onClick={handleClick}>Get suggestions</button>         
             </form>
         </div>

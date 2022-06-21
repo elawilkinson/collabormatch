@@ -1,6 +1,6 @@
 import React from "react";
 
-function ProjectTypeField () {
+function ProjectTypeField ( { userInput, setUserInput }) {
     return(
         <div>
             <label>Project type</label>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function AvailabilityField () {
+function AvailabilityField ( { userInput, setUserInput }) {
     return(
         <div>
             <label>Availability</label>

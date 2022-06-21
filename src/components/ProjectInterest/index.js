@@ -1,8 +1,9 @@
 import React from "react";
 
-function ProjectInterestField() {
+function ProjectInterestField({ userInput, setUserInput }) {
   function changeHandler(e) {
     console.log(e.target.value);
+    // instead of printing their choice, we would write a function that adds their choice to our {}
   }
   return (
     <div>
