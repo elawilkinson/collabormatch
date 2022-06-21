@@ -15,16 +15,13 @@ function Dropdown ( {userInput, setUserInput}) {
     function handleClick (e) {
         e.preventDefault()
         // how connect to backend?
+        // change visual of what people see - how do we revert back to 'null' value once we've hit the button?
         console.log("click that handle");
         setUserInput([projInt, projType, avail, strength]);
-        // setUserInput([{
-        //     "project_interest": projInt,
-        //     "project_type": projType,
-        //     "availability": avail,
-        //     "strength": strength
-        // }])
-        // send our complete object to the backend 
-        // return a suggestion
+        setAvail("");
+        setStrength("");
+        setProjType("");
+        setProjInt("");
     }
 
     console.log(avail)
