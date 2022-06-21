@@ -6,31 +6,31 @@
     ¬ npx create-react-app 
     ¬ component files 
         --> App: 
-        Import react, components
-        (Leave a note where navbar stuff would go)
-        H1, 
-        H2, 
-        Section intro,
-        Export our App.
+                Import react, components
+                (Leave a note where navbar stuff would go)
+                H1, 
+                H2, 
+                Section intro, (h2? p?)
+                Export our App.
         --> Form:
-        Project interest dropdown
-        Type of project dropdown
-        Confidence dropdown
-        Availability dropdown
-
-
-
-
-- Input form
-
-
+                Project interest dropdown
+                    (Label for project interest)
+                Type of project dropdown
+                    (Label for project type)
+                Confidence dropdown
+                    (Label for confidence level)
+                Availability dropdown
+                    (Label for availability)
+                Button
 - Join up with backend
-
+    ¬ Make sure our table/input fields align and can speak to each other
 
 
 
 ## If time / if we feel we need:
+- Investigate Bootstrap (for dropdown buttons)
 - Hi-fi wireframe
+- Styling
 
 
 
