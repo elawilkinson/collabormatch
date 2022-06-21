@@ -10,6 +10,7 @@ function StrengthField( { strength, setStrength } ) {
     <div>
       <label>Strength</label>
       <select name="Strength" onChange={changeHandler}>
+      <option value="null">(select from options below)</option>
         <option value="backend">Backend</option>
         <option value="frontend">Frontend</option>
         <option value="full-stack">Full stack</option>

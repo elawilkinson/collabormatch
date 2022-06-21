@@ -9,6 +9,7 @@ function ProjectInterestField({ projInt, setProjInt}) {
     <div>
       <label>Project Interest</label>
       <select name="projectInterest" onChange={changeHandler}>
+       <option value="null">(select from options below)</option>
         <option value="Sports">Sports</option>
         <option value="Games">Games</option>
         <option value="Photography">Photography</option>

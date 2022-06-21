@@ -9,6 +9,7 @@ function ProjectTypeField ( { projType, setProjType}) {
         <div>
             <label>Project type</label>
             <select name="projecttype" onChange={changeHandler}>
+                <option value="null">(select from options below)</option>
                 <option value="blog">Blog</option>
                 <option value="todolist">To-do List</option>
                 <option value="goddamnsurvey">Survey</option>
