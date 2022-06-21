@@ -10,8 +10,35 @@ function App() {
   // useState --> a way of tracking change
   //const userInput = {};
 
-  const [userInput, setUserInput] = useState([])
+  const [userInput, setUserInput] = useState(["a", "b", "c", "d"])
   console.log(`${userInput} from the App`)
+
+//   async function sendInput(userInput){
+//     try{
+//         const body = {userInput}
+//         const data = await fetch('http://localhost:5000/projects',{
+//             method: 'POST',
+//             headers: {"Content-Type": "application/json"},
+//             body: JSON.stringify({name: "", project_interest: userInput[0], project_type: userInput[1], strength: userInput[2], availability: userInput[3], img: "" })
+//         })
+//         console.log(data)
+//     }
+//     catch (error){
+//         console.error(error.message)
+//     }
+// }
+
+async function getProjects(){
+    try{
+      const data = await fetch('http://localhost:5000/projects');
+      const response = await data.json(); 
+      console.log(response)
+      }      
+  catch (error){
+      console.error(error.message)
+  }
+}
+
   return (
     <div className="App">
       {/* NB navbar - logo, profile icon, hamburger icon -could go here if time */}
@@ -32,7 +59,7 @@ function App() {
       </div>
       <div className="user-input">
         <p>Search below for your perfect collaborm8</p>
-        <Dropdown user={userInput} setUserInput={setUserInput}/>
+        <Dropdown user={userInput} setUserInput={setUserInput} getProjects={getProjects}/>
       </div>
     </div>
   );

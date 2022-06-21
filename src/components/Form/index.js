@@ -6,7 +6,7 @@ import ProjectTypeField from "../ProjectType";
 import StrengthField from "../Strength";
 import AvailabilityField from "../Availability";
 
-function Dropdown ( {userInput, setUserInput}) {
+function Dropdown ( {userInput, setUserInput, getProjects }) {
     const [avail, setAvail] = useState("");
     const [strength, setStrength] = useState("");
     const [projInt, setProjInt] = useState("");
@@ -17,12 +17,18 @@ function Dropdown ( {userInput, setUserInput}) {
         // how connect to backend?
         // change visual of what people see - how do we revert back to 'null' value once we've hit the button?
         console.log("click that handle");
-        setUserInput([projInt, projType, avail, strength]);
+        // setUserInput([projInt, projType, avail, strength]);
+        setUserInput(["penny", "raf", "brooka", "rebecca"]);
+        console.log(userInput);
         setAvail("");
         setStrength("");
         setProjType("");
         setProjInt("");
+        getProjects();
     }
+    // const userInput
+
+  
 
     console.log(avail)
     console.log(strength)
