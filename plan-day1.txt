@@ -1,0 +1,46 @@
+### code is life ###
+
+
+## Day 1 Front-End plan
+- Set up React App
+    ¬ npx create-react-app 
+    ¬ component files 
+        --> App: 
+        Import react, components
+        (Leave a note where navbar stuff would go)
+        H1, 
+        H2, 
+        Section intro,
+        Export our App.
+        --> Form:
+        Project interest dropdown
+        Type of project dropdown
+        Confidence dropdown
+        Availability dropdown
+
+
+
+
+- Input form
+
+
+- Join up with backend
+
+
+
+
+## If time / if we feel we need:
+- Hi-fi wireframe
+
+
+
+
+## COMPONENT TREE
+¬App
+--> Form
+###### Project interest 
+###### Type of project
+###### Confidence
+###### Availability
+--> Suggested profiles
+--> Leave a suggestion
