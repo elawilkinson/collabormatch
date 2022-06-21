@@ -1,14 +1,19 @@
 import React from "react";
 
-function StrengthField( { userInput, setUserInput } ) {
+function StrengthField( { strength, setStrength } ) {
+  function changeHandler(e) {
+    setStrength(e.target.value)
+    // instead of printing their choice, we would write a function that adds their choice to our {}
+  }
+
   return (
     <div>
       <label>Strength</label>
-      <select name="Strength">
-        <option value="1">Backend</option>
-        <option value="2">Frontend</option>
-        <option value="3">Full stack</option>
-        <option value="4">Testing</option>
+      <select name="Strength" onChange={changeHandler}>
+        <option value="backend">Backend</option>
+        <option value="frontend">Frontend</option>
+        <option value="full-stack">Full stack</option>
+        <option value="testing">Testing</option>
       </select>
     </div>
   );

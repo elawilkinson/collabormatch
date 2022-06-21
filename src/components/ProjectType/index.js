@@ -1,13 +1,17 @@
 import React from "react";
 
-function ProjectTypeField ( { userInput, setUserInput }) {
-    return(
+function ProjectTypeField ( { projType, setProjType}) {
+    function changeHandler(e) {
+        setProjType(e.target.value)
+        // instead of printing their choice, we would write a function that adds their choice to our {}
+      }
+      return (
         <div>
             <label>Project type</label>
-            <select name="projecttype">
-                <option value="hello">Blog</option>
-                <option value="hello">To-do List</option>
-                <option value="hello">Survey</option>
+            <select name="projecttype" onChange={changeHandler}>
+                <option value="blog">Blog</option>
+                <option value="todolist">To-do List</option>
+                <option value="goddamnsurvey">Survey</option>
             </select>
         </div>
     )

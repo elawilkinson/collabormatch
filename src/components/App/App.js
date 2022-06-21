@@ -10,8 +10,8 @@ function App() {
   // useState --> a way of tracking change
   //const userInput = {};
 
-  const [userInput, setUserInput] = useState({})
-  console.log(userInput)
+  const [userInput, setUserInput] = useState([])
+  console.log(`${userInput} from the App`)
   return (
     <div className="App">
       {/* NB navbar - logo, profile icon, hamburger icon -could go here if time */}
