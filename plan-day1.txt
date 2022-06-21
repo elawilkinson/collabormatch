@@ -3,16 +3,16 @@
 
 ## Day 1 Front-End plan
 - Set up React App
-    ¬ npx create-react-app 
+    ¬ npx create-react-app - DONE
     ¬ component files 
         --> App: 
-                Import react, components
+                Import react, components - DONE
                 (Leave a note where navbar stuff would go)
-                H1, 
-                H2, 
-                Section intro, (h2? p?)
-                Export our App.
-        --> Form:
+                H1, - DONE
+                H2, - DONE but need text
+                Section intro, (h2? p?) - DONE
+                Export our App. - DONE
+        --> Form: - SKELETON DONE, BUT PAUSING ON BOOTSTRAP RESEARCH
                 Project interest dropdown
                     (Label for project interest)
                 Type of project dropdown
