@@ -42,3 +42,19 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.suggestions-box{
+  background-color: rebeccapurple;
+  height: 50vh;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+#suggestions-intro{
+  width:100vw;
+}
+
+.suggestions-input{
+    padding: 2vh;
+}

@@ -2,6 +2,7 @@ import "./App.css";
 import React, {useState} from "react";
 
 import Dropdown from "../Form";
+import Suggestions from "../Suggestions";
 
 function App() {
   console.log("working!!!");
@@ -80,6 +81,7 @@ async function getProjects(){
       <div className="user-input">
         <p>Search below for your perfect collaborm8</p>
         <Dropdown userInput={userInput} setUserInput={setUserInput} getProjects={getProjects}/>
+        <Suggestions />
       </div>
     </div>
   );
