@@ -10,7 +10,12 @@ function App() {
   // useState --> a way of tracking change
   //const userInput = {};
 
-  const [userInput, setUserInput] = useState(["a", "b", "c", "d"])
+  const [userInput, setUserInput] = useState({
+    project_interest: "",
+    project_type: "",
+    strength: "",
+    availability: ""
+  })
   console.log(`${userInput} from the App`)
 
 //   async function sendInput(userInput){

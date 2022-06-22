@@ -13,7 +13,7 @@ function AvailabilityField ({avail, setAvail} ) {
                 <option value="null">(select from options below)</option>
                 <option value="weekends">Weekends</option>
                 <option value="evenings">Evenings</option>
-                <option value="anytime">All the time!!!!!!!!!</option>
+                <option value="anytime">Flexible</option>
             </select>           
         </div>
     )

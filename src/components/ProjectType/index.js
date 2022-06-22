@@ -12,6 +12,8 @@ function ProjectTypeField ( { projType, setProjType}) {
                 <option value="null">(select from options below)</option>
                 <option value="blog">Blog</option>
                 <option value="todolist">To-do List</option>
+                <option value="gallery">Gallery</option>
+                <option value="gallery">Forum</option>
                 <option value="goddamnsurvey">Survey</option>
             </select>
         </div>
