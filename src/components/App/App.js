@@ -5,11 +5,7 @@ import Dropdown from "../Form";
 import ProfileCard from "../ProfileCard";
 
 function App() {
-  // This is where we would store our user's choices
-  // useState --> a way of tracking change
-  //const userInput = {};
-
-   const [userInput, setUserInput] = useState({
+     const [userInput, setUserInput] = useState({
     project_interest: '',
     project_type: '',
     strength: '',
@@ -66,6 +62,8 @@ function App() {
           setUserInput={setUserInput}
           getProjects={getProjects}
         />
+      </div>
+      <div className="profile-cards">
         <ProfileCard />
         <ProfileCard />
         <ProfileCard />
@@ -75,3 +73,5 @@ function App() {
 }
 
 export default App;
+
+
