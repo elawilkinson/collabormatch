@@ -23,12 +23,6 @@ function Dropdown({ userInput, setUserInput }) {
         response[0].project_type === userInput.project_type
       ) {
         console.log('PERFECT MATCH');
-        // console.table([
-        //   {
-        //     type: userInput.project_type,
-        //     availability: userInput.availability,
-        //   },
-        // ]);
       }
     } catch (error) {
       console.error(error.message);
@@ -50,15 +44,7 @@ function Dropdown({ userInput, setUserInput }) {
     setProjType('');
     setProjInt('');
   }
-  // useEffect(() => {
-  //   handleClick();
-  // }, []);
 
-  // console.log(userInput);
-  // console.log(avail);
-  // console.log(strength);
-  // console.log(projInt);
-  // console.log(projType);
   return (
     <>
       <form className="dropdown-form">
