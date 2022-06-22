@@ -1,0 +1,34 @@
+:root {
+  --yellow: #FFD803;
+  --light-blue: #BAE8E8;
+  --main-text-colour: #272343;
+  --off-white: #F3FBFB;
+}
+
+.card {
+    color: var(--main-text-colour);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: var(--off-white);
+    border: 10px;
+    border-color: var(--light-blue);
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: var(--yellow);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }

@@ -1,7 +1,8 @@
 import "./App.css";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import Dropdown from "../Form";
+import ProfileCard from "../ProfileCard";
 
 function App() {
   console.log("working!!!");
@@ -10,8 +11,8 @@ function App() {
   // useState --> a way of tracking change
   //const userInput = {};
 
-  const [userInput, setUserInput] = useState([])
-  console.log(`${userInput} from the App`)
+  const [userInput, setUserInput] = useState([]);
+  console.log(`${userInput} from the App`);
   return (
     <div className="App">
       {/* NB navbar - logo, profile icon, hamburger icon -could go here if time */}
@@ -32,7 +33,13 @@ function App() {
       </div>
       <div className="user-input">
         <p>Search below for your perfect collaborm8</p>
-        <Dropdown user={userInput} setUserInput={setUserInput}/>
+        <Dropdown user={userInput} setUserInput={setUserInput} />
+      </div>
+      <div className="profile-cards">
+      <ProfileCard />
+      <ProfileCard />
+      <ProfileCard />
+      <ProfileCard />
       </div>
     </div>
   );

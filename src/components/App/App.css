@@ -9,14 +9,12 @@
   text-align: center;
 }
 
-
 body {
   color: var(--main-text-colour);
   font-family:
 }
 
 .dropdown-form {
-  background-color: rebeccapurple;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -25,14 +23,12 @@ body {
 }
 
 .dropdown-left {
-  background-color: dodgerblue;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .dropdown-right {
-  background-color: greenyellow;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
