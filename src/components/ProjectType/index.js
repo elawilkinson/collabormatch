@@ -13,7 +13,7 @@ function ProjectTypeField ( { projType, setProjType}) {
                 <option value="Blog">Blog</option>
                 <option value="Todo-list">To-do List</option>
                 <option value="Gallery">Gallery</option>
-                <option value="Gallery">Forum</option>
+                <option value="Forum">Forum</option>
                 <option value="Survey">Survey</option>
             </select>
         </div>
