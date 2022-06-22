@@ -1,8 +1,10 @@
 import './App.css';
 import React, { useState } from 'react';
 
-import Dropdown from '../Form';
+import Dropdown from "../Form";
+import Suggestions from "../Suggestions";
 import ProfileCard from '../ProfileCard';
+
 
 function App() {
   const [userInput, setUserInput] = useState({
@@ -87,6 +89,7 @@ function App() {
         {test && <ProfileCard info={test} />}
         {/* <ProfileCard />
         <ProfileCard /> */}
+     <Suggestions />
       </div>
     </div>
   );

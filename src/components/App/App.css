@@ -110,8 +110,24 @@ option{
 
 .dropdown-button {
   display: flex;
-  justify-content:center;
+   justify-content:center;
   padding:6%;
+}
+
+.suggestions-box{
+  background-color: rebeccapurple;
+  height: 50vh;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+#suggestions-intro{
+  width:100vw;
+}
+
+.suggestions-input{
+    padding: 2vh;
 }
 
 button{
