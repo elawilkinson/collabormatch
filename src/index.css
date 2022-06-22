@@ -24,4 +24,5 @@ code {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  margin-top: 10vh;
 }
