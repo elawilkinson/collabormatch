@@ -18,6 +18,21 @@ function App() {
   })
   console.log(`${userInput} from the App`)
 
+  
+
+async function test(userInput){
+  try {
+      const data = await fetch(`http://localhost:5000/projects?name=${userInput.project_type}`);
+      const response = await data.json(); 
+      if (response[0].availability === "Tuesday evenings" && response[0].project_type === userInput[1] ){
+        console.log('PERFECT MATCH')
+      }
+  } catch (error) {
+    console.error(error.message)
+  }
+}
+test()
+
 //   async function sendInput(userInput){
 //     try{
 //         const body = {userInput}
@@ -64,7 +79,7 @@ async function getProjects(){
       </div>
       <div className="user-input">
         <p>Search below for your perfect collaborm8</p>
-        <Dropdown user={userInput} setUserInput={setUserInput} getProjects={getProjects}/>
+        <Dropdown userInput={userInput} setUserInput={setUserInput} getProjects={getProjects}/>
       </div>
     </div>
   );

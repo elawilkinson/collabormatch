@@ -17,17 +17,17 @@ function Dropdown({ userInput, setUserInput }) {
     // change visual of what people see - how do we revert back to 'null' value once we've hit the button?
     console.log("click that handle");
     setUserInput({
-        project_interest: "poop",
-        project_type: "poop",
-        strength: "poop",
-        availability: "poop"
+        project_interest: projInt,
+        project_type: projType,
+        strength:strength,
+        availability: avail
       });
     setAvail("");
     setStrength("");
     setProjType("");
     setProjInt("");
   }
-
+  console.log(userInput)
   console.log(avail);
   console.log(strength);
   console.log(projInt);
