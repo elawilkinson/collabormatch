@@ -1,23 +1,21 @@
-import React from "react";
+import React from 'react';
 
-function AvailabilityField ({avail, setAvail} ) {
+function AvailabilityField({ avail, setAvail }) {
+  function changeHandler(e) {
+    setAvail(e.target.value);
+  }
 
-        function changeHandler(e) {
-        setAvail(e.target.value)
-      }
-
-    return(
-        <div>
-            <label>Availability</label>
-            <select name="availability" onChange={changeHandler}>
-                <option value="null">(select from options below)</option>
-                <option value="weekends">Weekends</option>
-                <option value="evenings">Evenings</option>
-                <option value="anytime">All the time!!!!!!!!!</option>
-            </select>           
-        </div>
-    )
-
+  return (
+    <div>
+      <label>Availability</label>
+      <select name="availability" onChange={changeHandler}>
+        <option value="null">(select from options below)</option>
+        <option value="Weekends">Weekends</option>
+        <option value="Evenings">Evenings</option>
+        <option value="Anytime">Flexible</option>
+      </select>
+    </div>
+  );
 }
 
-export default AvailabilityField
+export default AvailabilityField;
