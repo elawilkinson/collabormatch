@@ -1,16 +1,18 @@
-import "./App.css";
-import React, { useState } from "react";
+import './App.css';
+import React, { useState } from 'react';
 
-import Dropdown from "../Form";
-import ProfileCard from "../ProfileCard";
+import Dropdown from '../Form';
+import ProfileCard from '../ProfileCard';
 
 function App() {
-     const [userInput, setUserInput] = useState({
+  const [userInput, setUserInput] = useState({
     project_interest: '',
     project_type: '',
     strength: '',
     availability: '',
   });
+
+  const [test, setTest] = useState('');
 
   //   async function sendInput(userInput){
   //     try{
@@ -26,6 +28,24 @@ function App() {
   //         console.error(error.message)
   //     }
   // }
+  async function infoMatch(userInput) {
+    try {
+      const data = await fetch(
+        `http://localhost:5000/projects?name=${userInput.project_type}&aval=${userInput.availability}`
+      );
+      const response = await data.json();
+      console.table(response);
+      setTest(response);
+      if (
+        response[0].availability === userInput.availability &&
+        response[0].project_type === userInput.project_type
+      ) {
+        console.log('PERFECT MATCH');
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
 
   async function getProjects() {
     try {
@@ -61,17 +81,16 @@ function App() {
           userInput={userInput}
           setUserInput={setUserInput}
           getProjects={getProjects}
+          infoMatch={infoMatch}
         />
       </div>
       <div className="profile-cards">
-        <ProfileCard />
-        <ProfileCard />
-        <ProfileCard />
+        {test && <ProfileCard info={test} />}
+        {/* <ProfileCard />
+        <ProfileCard /> */}
       </div>
     </div>
   );
 }
 
 export default App;
-
-
