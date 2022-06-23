@@ -40,7 +40,7 @@ function More() {
       >
         Click For More Suggestions
       </button>
-      {tryd && <ProfileCard info={tryd} />}
+      <div className="profile-cards">{tryd && <ProfileCard info={tryd} />}</div>
       <Suggestions show={show}></Suggestions>
     </div>
   );
