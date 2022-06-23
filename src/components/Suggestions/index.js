@@ -46,9 +46,9 @@ function Suggestions({ show }) {
   }
   return (
     <div className="suggestions-box" style={show}>
-      <h3 id="suggestions-intro">
+      <h2 id="suggestions-intro">
         Can't find a project you're interested in? Suggest one below!
-      </h3>
+      </h2>
       <form>
         <div className="suggestions-left">
           <div className="suggestions-input">
