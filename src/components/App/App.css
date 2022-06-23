@@ -77,20 +77,12 @@ option {
   height: 15vh;
 }
 
-.dropdown-left {
+.dropdown-left, .dropdown-right {
   align-self: center;
   display: contents;
   flex-direction: column;
   justify-content: space-around;
   padding: 5%; 
-}
-
-.dropdown-right {
-  align-self: center;
-  display: contents;
-  flex-direction: column;
-  justify-content:space-around;
-  padding: 5%;
 }
 
 .suggestions-box {
