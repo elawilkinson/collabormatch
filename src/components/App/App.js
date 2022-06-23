@@ -57,9 +57,8 @@ function App() {
       </p>
       <div className="user-input">
         <Dropdown />
-      <More />
+        <More />
       </div>
-      <Suggestions />
     </div>
   );
 }
