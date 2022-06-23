@@ -1,7 +1,7 @@
 :root {
   --yellow: #FFD803;
   --light-blue: #BAE8E8;
-  --main-text-colour: #272343;
+  --main-text-colour: #243156;
   --off-white: #F3FBFB;
 }
 
@@ -14,6 +14,7 @@
 }
 
 body {
+  background-color: var(--off-white);
   margin: 0;
   color: var(--main-text-colour);
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -70,6 +71,7 @@ select {
 option {
   /* background-color:var(--light-blue); */
   font-weight: 500;
+  border: none;
 }
 
 .dropdown-form {
