@@ -50,49 +50,53 @@ function Suggestions({ show }) {
         Can't find a project you're interested in? Suggest one below!
       </h3>
       <form>
-        <div className="suggestions-input">
-          <label value="name">Your name</label>
-          <input
-            value={contact.name}
-            onChange={handleChangeFor('name')}
-            type="text"
-          ></input>
+        <div className="suggestions-left">
+          <div className="suggestions-input">
+            <label value="name">Your name</label>
+            <input
+              value={contact.name}
+              onChange={handleChangeFor('name')}
+              type="text"
+            ></input>
+          </div>
+          <div className="suggestions-input">
+            <label value="email">Your email</label>
+            <input type="text"></input>
+          </div>
+          <div className="suggestions-input">
+            <label value="project_interest">Project Interest</label>
+            <input
+              value={contact.project_interest}
+              onChange={handleChangeFor('project_interest')}
+              type="text"
+            ></input>
+          </div>
         </div>
-        <div className="suggestions-input">
-          <label value="email">Your email</label>
-          <input type="text"></input>
-        </div>
-        <div className="suggestions-input">
-          <label value="project_interest">Project Interest</label>
-          <input
-            value={contact.project_interest}
-            onChange={handleChangeFor('project_interest')}
-            type="text"
-          ></input>
-        </div>
-        <div className="suggestions-input">
-          <label value="name">Project Type</label>
-          <input
-            value={contact.project_type}
-            onChange={handleChangeFor('project_type')}
-            type="text"
-          ></input>
-        </div>
-        <div className="suggestions-input">
-          <label value="name">Availablity</label>
-          <input
-            value={contact.availability}
-            onChange={handleChangeFor('availability')}
-            type="text"
-          ></input>
-        </div>
-        <div className="suggestions-input">
-          <label value="name">Strength</label>
-          <input
-            value={contact.strength}
-            onChange={handleChangeFor('strength')}
-            type="text"
-          ></input>
+        <div className="suggestions-right">
+          <div className="suggestions-input">
+            <label value="name">Project Type</label>
+            <input
+              value={contact.project_type}
+              onChange={handleChangeFor('project_type')}
+              type="text"
+            ></input>
+          </div>
+          <div className="suggestions-input">
+            <label value="name">Availablity</label>
+            <input
+              value={contact.availability}
+              onChange={handleChangeFor('availability')}
+              type="text"
+            ></input>
+          </div>
+          <div className="suggestions-input">
+            <label value="name">Strength</label>
+            <input
+              value={contact.strength}
+              onChange={handleChangeFor('strength')}
+              type="text"
+            ></input>
+          </div>
         </div>
       </form>
       <button className="suggestions-button" onClick={() => sendInput(contact)}>
