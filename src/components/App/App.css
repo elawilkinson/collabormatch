@@ -1,7 +1,7 @@
 :root {
   --yellow: #FFD803;
   --light-blue: #BAE8E8;
-  --main-text-colour: #272343;
+  --main-text-colour: #243156;git
   --off-white: #F3FBFB;
 }
 
@@ -70,6 +70,7 @@ select {
 option {
   /* background-color:var(--light-blue); */
   font-weight: 500;
+  border: none;
 }
 
 .dropdown-form {
