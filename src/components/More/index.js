@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ProfileCard from '../components/ProfileCard';
+import ProfileCard from '../ProfileCard';
 
 function More() {
   const [tryd, setTryd] = useState('');
@@ -28,7 +28,9 @@ function More() {
   return (
     <div>
       <button onClick={OtherProfiles}>Click For More Suggestions</button>
+      <div className='profile-cards'>
       {tryd && <ProfileCard info={tryd} />}
+    </div>
     </div>
   );
 }

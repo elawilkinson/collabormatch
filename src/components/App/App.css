@@ -46,6 +46,15 @@ h1 {
   font-size: 12px;
 }
 
+
+  .profile-cards{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+
 label {
   padding: 5%;
   font-size: 18px;
@@ -85,12 +94,51 @@ option {
   padding: 5%; 
 }
 
+.card {
+  display: flex;
+  align-content: center;
+  align-items:center;
+  flex-direction: column;
+  color: var(--main-text-colour);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  min-width: 300px;
+  /* max-height: 300px; */
+  margin: 10px;
+  text-align: center;
+  background-color: var(--off-white);
+  border: 10px;
+  border-color: var(--light-blue);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+/* .container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+} */
+
+img {
+  width: 140px;
+  height: 140px;
+  border: 10px solid var(--light-blue);
+  margin: 1px;
+  border-radius: 50%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
 .suggestions-box {
   height: 50vh;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin: 50px;
 }
 
 .suggestions-input {
