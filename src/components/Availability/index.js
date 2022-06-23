@@ -8,7 +8,7 @@ function AvailabilityField({ avail, setAvail }) {
   return (
     <div>
       <label>Availability</label>
-      <select name="availability" onChange={changeHandler}>
+      <select value={avail} name="availability" onChange={changeHandler}>
         <option value="null">(select from options below)</option>
         <option value="Weekends">Weekends</option>
         <option value="Evenings">Evenings</option>

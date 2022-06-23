@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-function ProjectInterestField({ projInt, setProjInt}) {
+function ProjectInterestField({ projInt, setProjInt }) {
   function changeHandler(e) {
-    setProjInt(e.target.value)
+    setProjInt(e.target.value);
     // instead of printing their choice, we would write a function that adds their choice to our {}
   }
   return (
     <div>
       <label>Project Interest</label>
-      <select name="projectInterest" onChange={changeHandler}>
-       <option value="null">(select from options below)</option>
+      <select value={projInt} name="projectInterest" onChange={changeHandler}>
+        <option value="null">(select from options below)</option>
         <option value="Sports">Sports</option>
         <option value="Games">Games</option>
         <option value="Photography">Photography</option>
