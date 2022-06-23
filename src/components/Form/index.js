@@ -14,6 +14,7 @@ function Dropdown() {
   const [projType, setProjType] = useState('');
   const [test, setTest] = useState('');
   const [show, setShow] = useState(false);
+  const [show2, setShow2] = useState(false);
 
   async function infoMatch(userInput) {
     console.log(userInput);
@@ -25,6 +26,10 @@ function Dropdown() {
       setTest(response);
       // console.table(response);
       console.log(response.length);
+      if (response.length === 0) {
+        setShow2(!show2);
+        console.log('SRY THERE ARE NO MATCHES');
+      }
       if (
         response[0].availability === userInput.availability &&
         response[0].project_type === userInput.project_type
@@ -34,7 +39,6 @@ function Dropdown() {
     } catch (error) {
       console.error(error.message);
     }
-    console.log(userInput);
   }
   function handleClick(e) {
     e.preventDefault();
@@ -76,6 +80,9 @@ function Dropdown() {
         </button>
       </div>
       <div>{show ? <h1> These are your TOP MATCHES </h1> : null}</div>
+      <div>
+        {show2 ? <h2> SORRY, CURRENTLY, THERE ARE NO MATCHES </h2> : null}
+      </div>
       {/* make a clear button to clear stuff?*/}
       <div className="profile-cards">{test && <ProfileCard info={test} />}</div>
     </>
