@@ -4,10 +4,7 @@ function ProfileCard({ info }) {
   return info.map((x) => (
     <div className="container">
       <div className="card">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/8/8c/Cocktail_1988.jpg"
-          alt="SoC character"
-        />
+        <img src={x.img} alt="SoC character" />
         <h3>{x.name}</h3>
         <p className="project-interest">
           Project interest: {x.project_interest}
