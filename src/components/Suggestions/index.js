@@ -18,7 +18,7 @@ function Suggestions( ) {
           <input type="text"></input>
         </div>
       </form>
-      <button>Send suggestion</button>
+      <button className="suggestions-button">Send suggestion</button>
       </div>
   );
 }
