@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 
 function Suggestions({ show }) {
-  // const [input, setInput] = useState('')
+  const [bruh, setBruh] = useState(false);
 
-  // const handleChange = (event) => {
-  //   setInput(event.target.value);
-  //   console.log('value is:', event.target.value);
-  // };
   const initialContact = {
     name: '',
     project_interest: '',
@@ -99,9 +95,20 @@ function Suggestions({ show }) {
           </div>
         </div>
       </form>
-      <button className="suggestions-button" onClick={() => sendInput(contact)}>
+      <button
+        className="suggestions-button"
+        onClick={() => {
+          sendInput(contact);
+          setBruh(true);
+        }}
+      >
         Send suggestion
       </button>
+      <div>
+        {bruh ? (
+          <h2> Thank you for submitting your amazing idea! Lets Collaborm8!</h2>
+        ) : null}
+      </div>
     </div>
   );
 }
