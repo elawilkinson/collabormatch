@@ -35,10 +35,9 @@ function App() {
     <div className="App">
       {/* NB navbar - logo, profile icon, hamburger icon -could go here if time */}
       <div className="intro">
-        <h1>collabor8</h1>
-        <h2>
+        <h1>
           Welcome to <span className="collaborm8">Collaborm8</span>!{' '}
-        </h2>
+        </h1>
         <p className="paragraph">
           <span className="collaborm8">Collaborm8</span> is a collaborative
           platform built on a world of possibility. The possibility of forming
