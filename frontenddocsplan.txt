@@ -1,0 +1,4 @@
+TO DO LIST
+- Check over component folder names / export names and make sure everything is a) consistent, and b) well-named 
+- Repeat for variables and states
+- Go through and add comments where necessary / helpful for documentation 
