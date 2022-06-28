@@ -7,14 +7,13 @@ import AvailabilityField from '../Availability';
 import ProfileCard from '../ProfileCard';
 
 function GetSuggestions() {
-  // const [userInput, setUserInput] = useState({});
   const [avail, setAvail] = useState('');
   const [strength, setStrength] = useState('');
   const [projInt, setProjInt] = useState('');
   const [projType, setProjType] = useState('');
-  const [test, setTest] = useState('');
-  const [show, setShow] = useState(false);
-  const [show2, setShow2] = useState(false);
+  const [matchedUser, setMatchedUser] = useState('');
+  const [displayMatches, setDisplayMatches] = useState(false);
+  const [displayNoMatchMsg, setDisplayNoMatchMsg] = useState(false);
 
   async function infoMatch(userInput) {
     console.log(userInput);
@@ -23,11 +22,11 @@ function GetSuggestions() {
         `http://localhost:5000/projects?name=${userInput.project_type}&aval=${userInput.availability}`
       );
       const response = await data.json();
-      setTest(response);
-      // console.table(response);
+      setMatchedUser(response);
+      console.log(response);
       console.log(response.length);
       if (response.length === 0) {
-        setShow2(!show2);
+        setDisplayNoMatchMsg(!displayNoMatchMsg);
         console.log('SRY THERE ARE NO MATCHES');
       }
       if (
@@ -73,18 +72,18 @@ function GetSuggestions() {
         <button
           onClick={(e) => {
             handleClick(e);
-            setShow(!show);
+            setDisplayMatches(!displayMatches);
           }}
         >
           Get suggestions
         </button>
       </div>
-      <div>{show ? <h1> These are your TOP MATCHES </h1> : null}</div>
+      <div>{displayMatches ? <h1> These are your TOP MATCHES </h1> : null}</div>
       <div>
-        {show2 ? <h2> SORRY, CURRENTLY, THERE ARE NO MATCHES </h2> : null}
+        {displayNoMatchMsg ? <h2> SORRY, CURRENTLY, THERE ARE NO MATCHES </h2> : null}
       </div>
       {/* make a clear button to clear stuff?*/}
-      <div className="profile-cards">{test && <ProfileCard info={test} />}</div>
+      <div className="profile-cards">{matchedUser && <ProfileCard info={matchedUser} />}</div>
     </>
   );
 }
