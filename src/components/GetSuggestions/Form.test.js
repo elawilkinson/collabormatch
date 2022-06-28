@@ -1,9 +1,9 @@
 import { test, expect, jest } from "@jest/globals";
 import { render, screen } from '@testing-library/react';
-import Dropdown from './index.js';
+import GetSuggestions from './index.js';
 
 test('Form loads', () => {
-  render(<Dropdown/>);
+  render(<GetSuggestions/>);
   expect(screen.getByRole('button', {name: 'Get suggestions'})).toBeInTheDocument();
 });
 

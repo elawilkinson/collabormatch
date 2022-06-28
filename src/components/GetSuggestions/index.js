@@ -6,7 +6,7 @@ import StrengthField from '../Strength';
 import AvailabilityField from '../Availability';
 import ProfileCard from '../ProfileCard';
 
-function Dropdown() {
+function GetSuggestions() {
   // const [userInput, setUserInput] = useState({});
   const [avail, setAvail] = useState('');
   const [strength, setStrength] = useState('');
@@ -89,4 +89,4 @@ function Dropdown() {
   );
 }
 
-export default Dropdown;
+export default GetSuggestions;
