@@ -1,37 +1,37 @@
 import React, { useState } from 'react';
 
 function NewProjectSuggestion({ show }) {
-  const [bruh, setBruh] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState(false);
 
-  const initialContact = {
+  const blankProject = {
     name: '',
     project_interest: '',
     project_type: '',
     strength: '',
     availability: '',
   };
-  const [contact, setContact] = useState(initialContact);
-  // const [show, setShow] = useState({ visibility: 'hidden' });
+  const [newProjectSubmission, setNewProjectSubmission] = useState(blankProject);
+
 
   const handleChangeFor = (propertyName) => (event) => {
-    setContact((contact) => ({
-      ...contact,
+    setNewProjectSubmission((newProjectSubmission) => ({
+      ...newProjectSubmission,
       [propertyName]: event.target.value,
     }));
-    console.log(contact.name);
+    console.log(newProjectSubmission.name);
   };
 
-  async function sendInput(contact) {
+  async function sendInput(newProjectSubmission) {
     try {
       const data = await fetch('http://localhost:5000/projects', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: contact.name,
-          project_interest: contact.project_interest,
-          project_type: contact.project_type,
-          strength: contact.strength,
-          availability: contact.availability,
+          name: newProjectSubmission.name,
+          project_interest: newProjectSubmission.project_interest,
+          project_type: newProjectSubmission.project_type,
+          strength: newProjectSubmission.strength,
+          availability: newProjectSubmission.availability,
           img: '',
         }),
       });
@@ -50,7 +50,7 @@ function NewProjectSuggestion({ show }) {
           <div className="suggestions-input">
             <label value="name">Your name</label>
             <input
-              value={contact.name}
+              value={newProjectSubmission.name}
               onChange={handleChangeFor('name')}
               type="text"
             ></input>
@@ -62,7 +62,7 @@ function NewProjectSuggestion({ show }) {
           <div className="suggestions-input">
             <label value="project_interest">Project Interest</label>
             <input
-              value={contact.project_interest}
+              value={newProjectSubmission.project_interest}
               onChange={handleChangeFor('project_interest')}
               type="text"
             ></input>
@@ -72,7 +72,7 @@ function NewProjectSuggestion({ show }) {
           <div className="suggestions-input">
             <label value="name">Project Type</label>
             <input
-              value={contact.project_type}
+              value={newProjectSubmission.project_type}
               onChange={handleChangeFor('project_type')}
               type="text"
             ></input>
@@ -80,7 +80,7 @@ function NewProjectSuggestion({ show }) {
           <div className="suggestions-input">
             <label value="name">Availablity</label>
             <input
-              value={contact.availability}
+              value={newProjectSubmission.availability}
               onChange={handleChangeFor('availability')}
               type="text"
             ></input>
@@ -88,7 +88,7 @@ function NewProjectSuggestion({ show }) {
           <div className="suggestions-input">
             <label value="name">Strength</label>
             <input
-              value={contact.strength}
+              value={newProjectSubmission.strength}
               onChange={handleChangeFor('strength')}
               type="text"
             ></input>
@@ -98,14 +98,14 @@ function NewProjectSuggestion({ show }) {
       <button
         className="suggestions-button"
         onClick={() => {
-          sendInput(contact);
-          setBruh(true);
+          sendInput(newProjectSubmission);
+          setSubmitMessage(true);
         }}
       >
         Send suggestion
       </button>
       <div>
-        {bruh ? (
+        {submitMessage ? (
           <h2> Thank you for submitting your amazing idea! Lets Collaborm8!</h2>
         ) : null}
       </div>
