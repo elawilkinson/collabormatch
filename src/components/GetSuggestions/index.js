@@ -7,10 +7,13 @@ import AvailabilityField from '../Availability';
 import ProfileCard from '../ProfileCard';
 
 function GetSuggestions() {
+  // These states correspond to user input
   const [avail, setAvail] = useState('');
   const [strength, setStrength] = useState('');
   const [projInt, setProjInt] = useState('');
   const [projType, setProjType] = useState('');
+
+  // These states are relating to the suggested matches
   const [matchedUser, setMatchedUser] = useState('');
   const [displayMatches, setDisplayMatches] = useState(false);
   const [displayNoMatchMsg, setDisplayNoMatchMsg] = useState(false);
@@ -47,9 +50,7 @@ function GetSuggestions() {
       strength: strength,
       availability: avail,
     };
-    // how connect to backend?
-    // change visual of what people see - how do we revert back to 'null' value once we've hit the button?
-    // setUserInput(x);
+     // For later iteration: change visual of what people see - how do we revert back to 'null' value once we've hit the button?
     setAvail('');
     setStrength('');
     setProjType('');
@@ -82,7 +83,7 @@ function GetSuggestions() {
       <div>
         {displayNoMatchMsg ? <h2> SORRY, CURRENTLY, THERE ARE NO MATCHES </h2> : null}
       </div>
-      {/* make a clear button to clear stuff?*/}
+      {/* make a clear button to clear suggestions?*/}
       <div className="profile-cards">{matchedUser && <ProfileCard info={matchedUser} />}</div>
     </>
   );

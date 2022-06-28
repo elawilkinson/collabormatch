@@ -16,12 +16,6 @@ function ProfileCard({ info }) {
       </div>
     </div>
   ));
-  // info.map((x) => (
-  //   <div>
-  //     <h3>{x.name}</h3>
-  //     <p>{x.project_type}</p>
-  //   </div>
-  // ))
 }
 
 export default ProfileCard;

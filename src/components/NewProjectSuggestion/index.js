@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function NewProjectSuggestion({ show }) {
+function NewProjectSuggestion({ displayInputFields }) {
   const [submitMessage, setSubmitMessage] = useState(false);
 
   const blankProject = {
@@ -41,7 +41,7 @@ function NewProjectSuggestion({ show }) {
     }
   }
   return (
-    <div className="suggestions-box" style={show}>
+    <div className="suggestions-box" style={displayInputFields}>
       <h2 id="suggestions-intro">
         Can't find a project you're interested in? Suggest one below!
       </h2>

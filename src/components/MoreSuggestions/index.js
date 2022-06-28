@@ -4,7 +4,7 @@ import NewProjectSuggestion from '../NewProjectSuggestion'
 
 function MoreSuggestions() {
   const [userInformationCard, setUserInformationCard] = useState('');
-  const [show, setShow] = useState({ visibility: 'hidden' });
+  const [displayInputFields, setDisplayInputFields] = useState({ visibility: 'hidden' });
 
   function randomNum(min, max) {
     var n = [];
@@ -15,7 +15,7 @@ function MoreSuggestions() {
   }
   const getCountTimeout = () => {
     setTimeout(() => {
-      setShow({ visibility: 'visible' });
+      setDisplayInputFields({ visibility: 'visible' });
     }, 1500);
   };
   async function OtherProfiles() {
@@ -41,7 +41,7 @@ function MoreSuggestions() {
         Click For More Suggestions
       </button>
       <div className="profile-cards">{userInformationCard && <ProfileCard info={userInformationCard} />}</div>
-      <NewProjectSuggestion show={show}></NewProjectSuggestion>
+      <NewProjectSuggestion displayInputFields={displayInputFields}></NewProjectSuggestion>
     </div>
   );
 }

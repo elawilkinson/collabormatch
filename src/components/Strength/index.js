@@ -1,10 +1,8 @@
 import React from 'react';
 
 function StrengthField({ strength, setStrength }) {
-  // const options = ['Backend', 'Frontend', 'FullStack', 'Testing'];
   function changeHandler(e) {
     setStrength(e.target.value);
-    console.log(strength);
     // instead of printing their choice, we would write a function that adds their choice to our {}
   }
 
@@ -18,16 +16,20 @@ function StrengthField({ strength, setStrength }) {
         <option value="full-stack">Full stack</option>
         <option value="testing">Testing</option>
       </select>
-      {/* <button
-        onClick={(e) => {
-          e.preventDefault();
-          setStrength('');
-        }}
-      >
-        reset
-      </button> */}
     </div>
   );
 }
 
 export default StrengthField;
+
+
+// For future iterations: would we want to create a 'reset' button for user input? Or other functionality which puts back the dropdown selections to null?
+
+//  {/* <button
+//         onClick={(e) => {
+//           e.preventDefault();
+//           setStrength('');
+//         }}
+//       >
+//         reset
+//       </button> */}

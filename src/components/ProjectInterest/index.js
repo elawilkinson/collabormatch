@@ -1,9 +1,10 @@
 import React from 'react';
 
+// For future iterations: instead of having hard-coded project titles, we would write a function that POSTs their input directly to our dropdown. 
+
 function ProjectInterestField({ projInt, setProjInt }) {
   function changeHandler(e) {
-    setProjInt(e.target.value);
-    // instead of printing their choice, we would write a function that adds their choice to our {}
+    setProjInt(e.target.value);    
   }
   return (
     <div>
