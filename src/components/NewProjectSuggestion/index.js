@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Suggestions({ show }) {
+function NewProjectSuggestion({ show }) {
   const [bruh, setBruh] = useState(false);
 
   const initialContact = {
@@ -113,4 +113,4 @@ function Suggestions({ show }) {
   );
 }
 
-export default Suggestions;
+export default NewProjectSuggestion;

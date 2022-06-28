@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ProfileCard from '../ProfileCard';
-import Suggestions from '../Suggestions';
+import NewProjectSuggestion from '../NewProjectSuggestion'
 
 function MoreSuggestions() {
   const [userInformationCard, setUserInformationCard] = useState('');
@@ -41,7 +41,7 @@ function MoreSuggestions() {
         Click For More Suggestions
       </button>
       <div className="profile-cards">{userInformationCard && <ProfileCard info={userInformationCard} />}</div>
-      <Suggestions show={show}></Suggestions>
+      <NewProjectSuggestion show={show}></NewProjectSuggestion>
     </div>
   );
 }
