@@ -1,9 +1,9 @@
 import { test, expect, jest } from "@jest/globals";
 import { render, screen } from '@testing-library/react';
-import More from "./index.js";
+import MoreSuggestions from "./index.js";
 
 test('More loads', () => {
-  render(<More/>);
+  render(<MoreSuggestions/>);
   expect(screen.getByRole('button', {name: 'Click For More Suggestions'})).toBeInTheDocument();
 });
 

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import ProfileCard from '../ProfileCard';
 import Suggestions from '../Suggestions';
 
-function More() {
-  const [tryd, setTryd] = useState('');
+function MoreSuggestions() {
+  const [userInformationCard, setUserInformationCard] = useState('');
   const [show, setShow] = useState({ visibility: 'hidden' });
 
   function randomNum(min, max) {
@@ -24,8 +24,8 @@ function More() {
       const response = await data.json();
       // make if statment = if x = any of the userinput result return smt else do the normal map (line 21)
       const random = randomNum(0, response.length);
-      const tess = random.map((x) => response[x]);
-      setTryd(tess);
+      const randomUserData = random.map((x) => response[x]);
+      setUserInformationCard(randomUserData);
     } catch (error) {
       console.error(error.message);
     }
@@ -40,10 +40,10 @@ function More() {
       >
         Click For More Suggestions
       </button>
-      <div className="profile-cards">{tryd && <ProfileCard info={tryd} />}</div>
+      <div className="profile-cards">{userInformationCard && <ProfileCard info={userInformationCard} />}</div>
       <Suggestions show={show}></Suggestions>
     </div>
   );
 }
 
-export default More;
+export default MoreSuggestions;

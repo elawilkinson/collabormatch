@@ -9,7 +9,7 @@ import React from 'react';
 // importing our components 
   // originally, our Profile Card component was imported separately, but is now imported within this component to make the props/state journey shorter
 import GetSuggestions from '../GetSuggestions';
-import More from '../MoreSuggestions'; 
+import MoreSuggestions from '../MoreSuggestions'; 
 
 
 
@@ -36,7 +36,7 @@ function App() {
       </p>
       <div className="user-input">
         <GetSuggestions />
-        <More />
+        <MoreSuggestions />
       </div>
     </div>
   );
