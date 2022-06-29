@@ -1,10 +1,8 @@
 // importing styles
 import './App.css';
 
-
 // importing libraries
 import React from 'react';
-
 
 // importing our components 
   // originally, our Profile Card component was imported separately, but is now imported within this component to make the props/state journey shorter
