@@ -41,6 +41,9 @@ A user of the App might work through the below components:
 - Rather than having multiple CSS files, all our styling is centralised in `app.css`.
 - We have selected Root colours to ensure our house styling is cohesive.
 
+### Testing
+- Each component folder contains a test file which verifies that the component is displaying correctly.
+
 ## Notes for future development
 We have the following areas to look into for further iterations:
 - We would introduce additional navigation tools for users - e.g. a top navbar or hamburger icon.
@@ -48,5 +51,5 @@ We have the following areas to look into for further iterations:
 - Furthermore, we would aspire to introduce another level of functionality to our submit buttons, so that user input would be cleared/resetted once it has been submitted.
 
 
-
-
+### Collyn's Backend
+For our Backend Readme, click this [link](https://github.com/SchoolOfCode/w9_backend-project-team-collyn/blob/main/README.2_0.md).
